@@ -1,0 +1,89 @@
+@font-face {
+	font-family: "Cantarell";
+	src: url('../fonts/Cantarell.otf');
+	font-display: optional;
+}
+
+:root {
+	--cor-fundo: #ffffff;
+	--cor-texto: #111111;
+	--cor-borda: #7F7F7F;
+	--cor-azul: #4096f5;
+	--cor-vermelha: #ff7084;
+	--cor-verde: #63c259;
+	--cor-amarela: #efc72a;
+	--cor-branca: #fff;
+	--cor-cinza_claro: #DCDCDC;
+	--cor-cinza_escuro: #808080;
+	--borda-normal: solid 2px var(--cor-borda);
+	--borda-destaque: solid 2px var(--cor-azul);
+	--raio-borda: 0px;
+	--tamanho-fonte: 20px;
+	--quadrado-1: 16px;
+	--gap: 8px;
+	--pad: 4px 4px;
+	--pad: 4px 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--cor-fundo: #111111;
+		--cor-texto: #fffadf;
+		--cor-borda: #cecece;
+	}
+}
+
+* {
+	color: var(--cor-texto);
+	font-family: 'Cantarell', 'Segoe UI', 'Tahoma', sans-serif;
+	font-size: var(--tamanho-fonte);
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--cor-fundo);
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="color"] {
+    display: none;
+}
+
+input,
+select,
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    border: var(--borda-normal);
+    outline: none;
+}
+
+select:hover,
+button:hover {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    border: var(--borda-normal);
+    cursor: pointer;
+	outline: none;
+	border: var(--borda-destaque);
+}

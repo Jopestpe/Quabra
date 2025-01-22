@@ -1,0 +1,38 @@
+.bloco_abas {
+    display: flex;
+    width: 100%;
+    padding-inline: var(--pad);
+    gap: 4px;
+    
+}
+
+#abas {
+    height: 100%;
+	display: flex;
+	gap: var(--espaco-1);
+	overflow-x: scroll;
+	overflow-y: hidden;
+	padding: 0;
+}
+
+#criar_aba {
+    width: min-content;
+    padding: 0px 4px 4px 4px;
+}
+
+.aba {
+    height: 100%;
+    padding-inline: 4px;
+    border-top: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.aba:hover,
+#criar_aba:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+.aba_atual {
+    border-top: solid 2px var(--cor-azul);
+}

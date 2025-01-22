@@ -1,0 +1,38 @@
+.selecionar {
+   padding: var(--pad);
+   border: none;
+   text-align: center;
+}
+
+.selecionar:hover {
+   border: none;
+   color: var(--cor-azul);
+}
+
+.ocultar {
+	display: none;
+}
+
+.entrada_cor {
+	width: auto;
+	height: 100%;
+	aspect-ratio: 1/1;
+	text-align: center;
+	background-color: transparent;
+	border: var(--borda-normal);
+	border-radius: var(--raio-borda);
+}
+
+.botao:hover,
+.botao {
+    border: none;
+}
+
+.entrada_numeral {
+    background-color: transparent;
+    outline: none;
+    color: var(--cor-texto);
+    border: none;
+    text-align: center;
+    max-width: 80px;
+}

@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+    <meta name="description" content="Quabra é um site quadro em branco para desenho">
+    <meta name="keywords" content="desenhar">
+    <meta name="author" content="Jopestpe">
+    <meta name="publisher" content="Jopestpe">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
     <title>Quabra</title>
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="icone.png" />
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/area.css">
+    <link rel="stylesheet" href="styles/elemento.css">
+    <link rel="stylesheet" href="styles/abas.css">
+    <script defer src="scripts/geral.js"></script>
 </head>
 <body>
     <div class="barra">
-        Largura: <input type="number" id="inputLargura" min="100" max="1000" value="800">
-        Altura: <input type="number" id="inputAltura" min="100" max="1000" value="600">
-        <button id="btnAtualizar">Atualizar Tamanho</button>
+        <input class="ocultar" id="EntradaDeArquivo" type="file" multiple accept=".jpg,.jpeg,.png,.gif,.bmp,.webp,.svg">
+        <button id="BotaoEntradaDeArquivo" class="botao" aria-label="importar">Importar</button>
+        <select class="selecionar" id="selecionar_baixar">
+            <option value="" selected disabled hidden>Baixar</option>
+            <option value="png">PNG</option>
+            <option value="jpg">JPG</option>
+            <option value="svg">SVG</option>
+        </select>
+        <select class="selecionar" id="selecionar_estilo">
+            <option value="" selected disabled hidden>Render</option>
+            <option value="normal">Normal</option>
+            <option value="pixel">Pixel</option>
+        </select>
+        <select class="selecionar" id="selecionar_pincel">
+            <option value="" selected disabled hidden>Pincel</option>
+            <option value="normal">Lápis</option>
+            <option value="pixel">Pixel</option>
+        </select>
+        <button id="BotaoBorracha" class="botao">[E]</button>
+        <input class="ocultar" id="CorFundo" type="color">
+        <button class="entrada_cor acao" aria-label="cor fundo" id="alterar_cor_pincel" type="color"></button>
+        <input id="entrada_tamanho_pincel" class="entrada_numeral" type="number" min="1" value="1">
     </div>
-    <div class="area_quadro">
-        <canvas id="quadro"></canvas>
+    <div class="bloco_abas">
+        <div id="criar_aba">┼</div>
+        <div id="abas"></div>
+    </div>
+    <div id="area_quadro">
+        <canvas id="quadro" class="fundo_quadriculado"></canvas>
+    </div>
+    <div class="barra">
+        <input class="entrada_numeral" type="number" id="largura_imagem" min="0" value="32">
+        x<input class="entrada_numeral" type="number" id="altura_imagem" min="0" value="32">
+        <div class="bloco_zoom">
+            <input id="zoom_span" class="entrada_numeral" type="number" min="0" max="1000" value="100">%
+        </div>
+        <button id="BotaoZoom" class="botao">[Z]</button>
     </div>
 </body>
 </html>
