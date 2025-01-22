@@ -8,8 +8,8 @@ Quabra é uma pagina para desenhos simples
 
 ## No Quabra é possível ⤵️
 
-    ✅ Criar e editar PNG, JPEG, SVG entre outros
-    ✅ Salvar em PNG, JPEG e SVG
+- ✅ Criar e editar PNG, JPEG, SVG entre outros
+- ✅ Salvar em PNG, JPEG e SVG
 
 ## Melhorias pendentes
 
